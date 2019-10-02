@@ -13,6 +13,8 @@ function getRepos(username) {
         
         if (response.message === "Not Found") {
             alert("User Not Found!  Try Again!");
+            document.querySelector("#output").innerHTML = "";
+            document.querySelector("#form").reset();
         }
         else {
             let generateHTML = "";
