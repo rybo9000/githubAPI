@@ -7,15 +7,14 @@ function getRepos(username) {
         })
     };
     
-    console.log(`https://api.github.com/users/${username}/repos`);
-    
     fetch(`https://api.github.com/users/${username}/repos`, options)
     .then (response => response.json())
     .then (response => {
+        let generateHTML = "";
         for (let i = 0; i < response.length; i++) {
-            console.log(response[i].name);
-            console.log(response[i].url);
+            generateHTML += `<a href="${response[i].url}" target="_blank">${response[i].name}</a>`
         }
+        document.querySelector("#output").innerHTML = generateHTML;
     })
 }
 
