@@ -8,7 +8,7 @@ function getRepos(username) {
     };
     
     fetch(`https://api.github.com/users/:${username}/repos`, options)
-    .then (reponse => Response.json())
+    .then (reponse => response.json())
     .then (reponse => console.log(response));
 }
 
