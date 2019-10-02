@@ -14,8 +14,11 @@ function getRepos(username) {
         for (let i = 0; i < response.length; i++) {
             generateHTML += `<p><a href="${response[i].html_url}" target="_blank">${response[i].name}</a></p>`
         }
-        document.querySelector("#output").innerHTML = generateHTML;
-        document.querySelector("#form").reset();
+
+        console.log(response);
+        
+        // document.querySelector("#output").innerHTML = generateHTML;
+        // document.querySelector("#form").reset();
     })
 }
 
