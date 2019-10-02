@@ -12,7 +12,7 @@ function getRepos(username) {
     .then (response => {
         let generateHTML = "";
         for (let i = 0; i < response.length; i++) {
-            generateHTML += `<p><a href="${response[i].url}" target="_blank">${response[i].name}</a></p>`
+            generateHTML += `<p><a href="${response[i].html_url}" target="_blank">${response[i].name}</a></p>`
         }
         document.querySelector("#output").innerHTML = generateHTML;
     })
