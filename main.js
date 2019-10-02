@@ -15,6 +15,7 @@ function getRepos(username) {
             generateHTML += `<p><a href="${response[i].html_url}" target="_blank">${response[i].name}</a></p>`
         }
         document.querySelector("#output").innerHTML = generateHTML;
+        document.querySelector("#form").reset();
     })
 }
 
