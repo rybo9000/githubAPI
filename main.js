@@ -7,9 +7,9 @@ function getRepos(username) {
         })
     };
     
-    fetch(`https://api.github.com/users/:${username}/repos`)
-    .then (reponse => response.json())
-    .then (reponse => console.log(response))
+    fetch(`https://api.github.com/users/:${username}/repos, options`)
+    .then (response => response.json())
+    .then (response => console.log(response))
 }
 
 document.querySelector("#search").addEventListener("click", (e) => {
